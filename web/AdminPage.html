@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                 background-color: lightskyblue;
+                 background-size: 100%;
+                 margin : 0;
+            }
+            #header{
+                 height: 100px;
+                 width:100%;
+                 background-image:url(IMAGES/HEAD4.jpg);
+            }
+            h1{
+                margin: 2% auto;
+                text-align: center;
+                background-color: blueviolet;
+                font-weight: bolder;
+                font-size: 23px;
+                color:white;
+                width: 210px;
+                padding: 15px;
+                border-radius:8px;
+                border: 2px solid white;
+            }
+            .admin-tab{
+                text-align: center;
+                background-color: orangered;
+                font-weight: bolder;
+                font-size: 23px;
+                color:white;
+                display: inline-block;
+                width: 210px;
+                padding: 15px;
+                border-radius:8px;
+                border: 2px solid white;
+            }
+            #anchors{
+                margin: 5% 20% 0;
+            }
+            #anchors a{
+                padding: 1%;
+            }
+        </style>    
+    </head>
+    <body>
+        <div id="header"></div>
+        <h1>Admin Page</h1>
+        
+        <div id="anchors">
+            <a href="DeleteBook.html">
+                <div class="admin-tab">Delete Book</div>
+            </a> 
+            <a href="ReturnBook.html">
+                <div class="admin-tab">Return Book</div>
+            </a>
+            <a href="RenewBook.html">
+                <div class="admin-tab">Renew Book</div>
+            </a>
+        </div>
+    </body>
+</html>

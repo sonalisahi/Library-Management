@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script language="javascript" type="text/javascript">
+        var timer = 0;
+        var images = new Array(	"./IMAGES/Albumphoto432.png","./IMAGES/Albumphoto466.png",
+            "./IMAGES/Albumphoto471.png","./IMAGES/Albumphoto479.png","./IMAGES/Albumphoto480.png");
+        var countimages = 0;
+        function startTime() {
+            if(timer) {
+                timer = 0;
+            }
+            var currentDate = new Date();
+
+            if(countimages == images.length) {
+                countimages = 0;
+            }
+                
+            document.getElementById("img1").src = images[countimages];
+
+            countimages++;
+            timer = setTimeout("startTime()", 3000);
+        }
+        </script>
+        <style>
+            body{
+                 background-image:url(IMAGES/blue.jpg);
+                 background-size: 100%;
+                 background-repeat: no-repeat;
+                 margin : 0;
+            }
+            #header{
+                 height: 100px;
+                 width:100%;
+                 background-image:url(IMAGES/HEAD4.jpg);
+            }
+            #anchors{
+                 margin : 2% 0%;
+            }
+            
+            #tag-container {
+                margin: 0 auto;
+                width: 600px;
+            }
+            
+            #anchors a{
+                color:yellow;
+                margin: 10px;
+                text-decoration: none;
+            }
+            
+            #imageMove{
+                margin-left : 54%;
+                margin-right : 1%;
+                width : 45%;
+            }
+            #img1{
+                width : 100%;
+            }
+            #moveFoot{
+                behaviour: slide;
+                height:5%;
+                width:100%;
+                color:red;
+            }
+        </style>
+        </head>
+    
+    <body onload="startTime()">
+        <div id="header">
+        </div> 
+        <div id="anchors">
+            <div id ="tag-container">
+                <a href="home.html">LOGIN </a>
+                <a href="contactus.html">CONTACT US</a>
+                <a href="RegType.html">REGISTRATION </a>
+                <a href="tandc.html">TERMS AND CONDITIONS</a>
+            </div>
+        </div>
+        <div id="imageMove">
+            <img id="img1" alt="placeholder image" src="./IMAGES/Albumphoto432.png">
+        </div>
+        <marquee direction="right" id="moveFoot">
+                <h3>NIT PATNA</h3>
+        </marquee>
+    </body>
+</html>

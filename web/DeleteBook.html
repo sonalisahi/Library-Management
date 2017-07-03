@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: lightskyblue;
+                background-size: 100%;
+                margin : 0;
+            }
+            h1{
+                text-align: center;
+            }
+            #header{
+                height: 100px;
+                width:100%;
+                background-image:url(IMAGES/HEAD4.jpg);
+            }
+            #form{
+                margin : 5% 38%;
+            }
+            label{
+                font-size: 18px;
+                color: red;
+                padding: 4%;
+            }
+            #submit{
+                margin: 15% 40%;
+                padding:1% 2%;
+            }
+        </style>        
+    </head>
+    <body>
+        <div id="header"></div>
+        <div>
+            <h1>Enter the book id you want to delete</h1>
+        </div>   
+        <div id="form">
+            <form action="DeleteBook.jsp">
+                <div>
+                    <label> BOOK ID: </label>
+                    <input type="text" name="bkid"/>
+                </div>
+                <input id="submit" type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>

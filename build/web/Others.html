@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #header{
+                height:80px;
+                width: 100%;
+                background-image:url(IMAGES/SRCHB1.jpg);
+            }
+            body{
+                margin : 0;
+                background-color: lightskyblue;
+            }
+            h1{
+                text-align: center;
+            }
+            #form{
+                margin-top: 2%;
+                margin-left: 2%;
+                float : left;
+                width: 47%;
+                display: inline-block;
+            }
+            #sidePic{
+                margin-top:2%;
+                margin-right : 2%;
+                width:47%;
+                height: 65%;
+                display: inline-block;
+            }
+            #img1{
+                width: 80%;
+            }
+            .tab{
+                padding: 10px;
+            }
+            #go{
+                margin:10px;
+                padding-left :2%;
+            }
+        </style>    
+    </head>
+    <body>
+        <div id="header">
+        </div>
+        <div id="form">
+            <form action ="Search.jsp"> 
+                <div class="tab">
+                    <label>BRANCH TYPE: </label>
+                    <select name="branch">
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="IT">IT</option>
+                        <option value="ME">ME</option>
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                </div>
+                <div class="tab">
+                    <label>BOOK NAME: </label>
+                    <input type="text" name="bname">
+                </div>
+                <input id="go" type="submit" value="GO">
+                <a href="home.html">Go to home page</a>
+            </form>  
+        </div>
+        <div id="sidePic">
+            <img id="img1" src="IMAGES/ADMN1.jpg">
+        </div>
+    </body>
+</html>

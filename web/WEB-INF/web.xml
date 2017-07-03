@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <welcome-file-list>
+        <welcome-file>/main.html</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>UserTypeValidation</servlet-name>
+        <servlet-class>controllers.UserTypeValidation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserTypeValidation</servlet-name>
+        <url-pattern>/UserTypeValidation</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>StdRegServ</servlet-name>
+        <servlet-class>controllers.StdRegServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StdRegServ</servlet-name>
+        <url-pattern>/StdRegServ</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FacRegServ</servlet-name>
+        <servlet-class>controllers.FacRegServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FacRegServ</servlet-name>
+        <url-pattern>/FacRegServ</url-pattern>
+    </servlet-mapping>
+</web-app>    

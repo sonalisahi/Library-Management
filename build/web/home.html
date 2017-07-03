@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+            body{
+                 background-color: lightskyblue;
+                 background-size: 100%;
+                 margin : 0;
+            }
+            #header{
+                 height: 100px;
+                 width:100%;
+                 background-image:url(IMAGES/HEAD4.jpg);
+            }
+            #form{
+                margin-top: 2%;
+                margin-left: 2%;
+                float : left;
+                width: 47%;
+                display: inline-block;
+            }
+            #sidePic{
+                margin-top:2%;
+                margin-right : 2%;
+                width:47%;
+                height: 65%;
+                display: inline-block;
+            }
+            #img1{
+                max-width : 100%;
+                max-height: 100%;
+            }
+            .tab{
+                padding : 1%;
+            }
+            #login{
+                margin-left:15px;
+                padding: 2px 8px;
+            }
+        </style>    
+        
+    </head>
+    
+    <body>
+        <div id="header">
+        </div>
+        
+        <div id="form">
+            <img id="img2" alt="login" src="IMAGES/LOG2.jpg">
+            <form method="post" action="UserTypeValidation">
+                <div class="tab">
+                    <label>Username: </label>
+                    <input type="text" name="usr" id="usr" required>
+                </div>
+                <div class="tab">
+                    <label>Password: </label>
+                    <input type="password" name="pswd" id="pswd" required>
+                </div>
+                <div class="tab">
+                <label>User type: </label>
+                    <select name="sel">
+                        <option value="Admin">Admin</option>
+                        <option value="Faculty">Faculty</option>
+                        <option value="Student">Student</option>
+                    </select>
+                <input id="login" type="submit" value="login">
+                </div>
+            </form>
+            <a href="forgot.html"><h3>Forgot Password??</h3></a>
+            <a href="Others.html"><h3>OTHERS CAN SEARCH BOOKS HERE</h3></a>
+            <a href="RegType.html"><h3>NEW USER CAN REGISTER HERE???</h3></a>
+        </div>
+        <div id="sidePic">
+            <img id="img1" alt="clgPic" src="IMAGES/CLG.jpg">;
+        </div>   
+    </body>  
+</html>

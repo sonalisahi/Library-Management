@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: lightskyblue;
+                background-size: 100%;
+                margin : 0;
+            }
+            #header{
+                height: 100px;
+                width:100%;
+                background-image:url(IMAGES/HEAD4.jpg);
+            }
+            #renew{
+                background-color: orangered;
+                font-weight: bolder;
+                font-size: 40px;
+                color:white;
+                width: 310px;
+                height:50px;
+                padding:10px;
+                text-align: center;
+                border-radius:8px;
+                border: 2px solid white;
+                margin:5% auto;
+            }
+            #form{
+                margin : 5% 38%;
+            }
+            .tab{
+                padding: 2%;
+            }
+            .input-title{
+                font-size: 18px;
+                color: red;
+                display: inline-block;
+                padding: 4%;
+                width: 100px;
+            }
+            #submit{
+                margin: 15% 40%;
+                padding:1% 2%;
+            }
+        </style>        
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="renew">
+            Renew
+        </div>   
+        <div id="form">
+            <form action="DeleteBook.jsp">
+                <div class="tab">
+                    <label class="input-title"> Student mail: </label>
+                    <input type="text" name="smail"/>
+                </div>
+                <div class="tab">
+                    <label class="input-title"> Book Id: </label>
+                    <input type="text" name="bid"/>
+                </div>
+                <input id="submit" type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>

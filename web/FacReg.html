@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            #header{
+                background-image:url(IMAGES/HEAD4.jpg);
+                height:100px;
+                width:100%;
+            }
+            body{
+                margin:0;
+                background-color:lightskyblue;
+            }
+            #form{
+                margin: 1% 0% 2% 40%;
+            }
+            #img1{
+                margin: 2% 0% 0% 40%;
+            }
+            .tab{
+                padding : 2%;
+            }
+            .input-title{
+                width: 140px;
+                display: inline-block;
+            }
+            .input-value{
+                width: 180px;
+                
+            }
+            #submit{
+                margin-left:18%;
+                margin-top:1%;
+            }
+            
+        </style>   
+    </head>
+    <body>
+        <div id="header">
+        </div>
+        <img id="img1" src="IMAGES/regb1.jpg">
+        <div id="form">
+            <form method="post" action="FacRegServ">
+                <div class="tab">
+                    <label class="input-title">NAME:</label>
+                    <input class="input-value" type="text" name="fname" required>
+                </div> 
+                <div class="tab">
+                    <label class="input-title">DEPARTMENT:</label>
+                    <select class="input-value" name="branch">
+                        <option value="cs">COMPUTER SCIENCE
+                        <option value="ci">CIVIL ENGINEERING
+                        <option value="ec">ELECTRONICS AND COMMUNICATION
+                        <option value="mech">MECHANICAL ENGINEERING
+                        <option value="elc">ELECTRICAL ENGINEERING
+                    </select>
+                </div>
+                <div class="tab">
+                    <label class="input-title">EMAIL ID:</label>
+                    <input class="input-value" type="text" name="femail" required>
+                </div>
+                <input id="submit" type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </body>
+</html>
