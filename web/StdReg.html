@@ -8,66 +8,95 @@
             }
             body{
                 margin:0;
-                background-color:lightskyblue;
+                background-color: #dfffb5;
             }
             #form{
-                margin: 1% 0% 2% 40%;
+                margin: 1% 0% 2% 37%;
+                font-size: 20px;
             }
             #img1{
-                margin: 2% 0% 0% 40%;
+                margin: 2% 0% 0% 42%;
             }
             .tab{
                 padding : 2%;
             }
+            
+            input, select {
+                height: 35px;
+                width: 300px;
+                font-size: 18px;
+                padding: 3px 7px;
+                border-radius: 4px;
+            }
             .input-title{
-                width: 150px;
+                width: 215px;
                 display: inline-block;
             }
-            .input-value{
-                width: 180px;
-                
-            }
             #submit{
-                margin-left:18%;
+                margin-left:12%;
                 margin-top:1%;
             }
-        </style>    
+        </style>
     </head>
     <body>  
         <div id="header">
         </div>
         <img id="img1" src="IMAGES/regb1.jpg">
         <div id="form">
-            <form method="post" action="StdRegServ">
+            <form method="post" onsubmit="return validateForm()" action="StdRegServ">
                 <div class="tab">
-                    <label class="input-title">NAME:</label>
-                    <input class="input-value" type="text" name="sname" required>
-                </div>
-                <div class="tab">
-                    <label class="input-title">ENROLLMENT_NO:</label>
-                    <input class="input-value" type="text" name="senroll" required>
-                </div>
-                <div class="tab">
-                    <label class="input-title">SEMESTER:</label>
-                    <input class="input-value" type="number" name="ssem" required>
-                </div>
-                <div class="tab">
-                    <label class="input-title">BRANCH:</label>
-                    <select class="input-value" name="branch">
-                        <option value="cs">COMPUTER SCIENCE
-                        <option value="ci">CIVIL ENGINEERING
-                        <option value="ec">ELECTRONICS
-                        <option value="mech">MECHANICAL ENGINEERING
-                        <option value="elc">ELECTRICAL ENGINEERING
+                    <label class="input-title">BRANCH :</label>
+                    <select class="input-value" name="branch" required>
+                        <option value="" selected disabled>Select your branch</option>
+                        <option value="cs">COMPUTER SCIENCE</option>
+                        <option value="ci">CIVIL ENGINEERING</option>
+                        <option value="ec">ELECTRONICS</option>
+                        <option value="mech">MECHANICAL ENGINEERING</option>
+                        <option value="elc">ELECTRICAL ENGINEERING</option>
                     </select>
                 </div>
                 <div class="tab">
-                    <label class="input-title">EMAIL ID:</label>
-                    <input class="input-value" type="text" name="semail" required>
+                    <label class="input-title">ENROLLMENT :</label>
+                    <input class="input-value" type="text" name="enroll" required>
                 </div>
-                <input id="submit" type="submit" value="SUBMIT">
+                <div class="tab">
+                    <label class="input-title">STUDENT NAME :</label>
+                    <input class="input-value" type="text" name="name" required>
+                </div>
+                <div class="tab">
+                    <label class="input-title">EMAIL ID :</label>
+                    <input class="input-value" type="email" name="email" required>
+                </div>
+                <div class="tab">
+                    <label class="input-title">Mobile NUMBER :</label>
+                    <input class="input-value" type="text" name="mob" required>
+                </div>
+                <div class="tab">
+                    <label class="input-title">PASSWORD :</label>
+                    <input id="pass" class="input-value" type="password" name="password" required>
+                </div>
+                <div class="tab">
+                    <label class="input-title">CONFIRM PASSWORD :</label>
+                    <input id="confirm-pass" class="input-value" type="password" required>
+                </div>
+                <input id="submit" type="submit" value="REGISTER">
             </form>
         </div>
+        <script>
+            function validateForm(){
+                // adding custum validation before submit
+                var pass = document.getElementById('pass').value;
+                var confirmPass = document.getElementById('confirm-pass').value;
+                
+                if (pass === confirmPass) {
+                    return true;
+                } else {
+                    alert('Password confirmation failed. Please enter same password.');
+                    return false;
+                }
+            }
+           
+        </script>
     </body>
 </html>
 

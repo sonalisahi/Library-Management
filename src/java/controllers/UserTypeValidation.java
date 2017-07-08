@@ -23,8 +23,12 @@ public class UserTypeValidation extends HttpServlet{
         
         try (PrintWriter out = response.getWriter()) {
             flag=false;
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
+            //old code
+            //Class.forName("oracle.jdbc.driver.OracleDriver");
+            //con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
+            // new code
+            Class.forName("com.mysql.jdbc.Driver");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/library","scott","tiger");
             
             String uname=request.getParameter("usr");
             session.setAttribute("name",uname);
@@ -69,11 +73,13 @@ public class UserTypeValidation extends HttpServlet{
            
             if(utype.equals("Student")){
                 flag=true;
-                ps=con.prepareStatement("select * from olstdreg where usertype='"+utype+"'");
+                ps=con.prepareStatement("select * from students");
                 rs=ps.executeQuery();
 
                 while(rs.next()){
-                    if(uname.equals(rs.getString(1))&& upass.equals(rs.getString(6)) && utype.equals("Student")){ 
+                    String one = rs.getString(1);
+                    String six = rs.getString(6);
+                    if(uname.equals(one)&& upass.equals(six)){ 
                         flag=false;
                         request.getRequestDispatcher("/Student.jsp").forward(request, response);
                         break;
