@@ -18,7 +18,7 @@
                 margin: 2% 0% 0% 42%;
             }
             .tab{
-                padding : 2%;
+                padding : 1%;
             }
             
             input, select {
@@ -26,7 +26,7 @@
                 width: 300px;
                 font-size: 18px;
                 padding: 3px 7px;
-                border-radius: 4px;
+                border-radius: 6px;
             }
             .input-title{
                 width: 215px;
@@ -35,6 +35,8 @@
             #submit{
                 margin-left:12%;
                 margin-top:1%;
+                width: 250px;
+                background-color:aqua;
             }
         </style>
     </head>
@@ -68,7 +70,7 @@
                     <input class="input-value" type="email" name="email" required>
                 </div>
                 <div class="tab">
-                    <label class="input-title">Mobile NUMBER :</label>
+                    <label class="input-title">MOBILE NUMBER :</label>
                     <input class="input-value" type="text" name="mob" required>
                 </div>
                 <div class="tab">
@@ -78,6 +80,15 @@
                 <div class="tab">
                     <label class="input-title">CONFIRM PASSWORD :</label>
                     <input id="confirm-pass" class="input-value" type="password" required>
+                </div>
+                
+                <div class="tab">
+                    <label class="input-title">FAVOURITE NUMBER :</label>
+                    <input class="input-value" type="text" name="fNumber" required>
+                </div>
+                <div class="tab">
+                    <label class="input-title">FAVOURITE FRUIT :</label>
+                    <input class="input-value" type="text" name="fFruit" required>
                 </div>
                 <input id="submit" type="submit" value="REGISTER">
             </form>

@@ -24,7 +24,7 @@ public class StdRegServ extends HttpServlet {
     boolean flag = false;     // is already registered
     boolean valid = false;    // details entered valid or not
     boolean regis = false;    // registration status
-    String branch, enroll, name, email, mob, password;
+    String branch, enroll, name, email, mob, password, fNumber, fFruit;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -42,6 +42,8 @@ public class StdRegServ extends HttpServlet {
             email=request.getParameter("email");
             mob=request.getParameter("mob"); 
             password=request.getParameter("password");
+            fNumber=request.getParameter("fNumber");
+            fFruit=request.getParameter("fFruit");
 
             ps=con.prepareStatement("select enrollment_number from students");
             rs=ps.executeQuery();
@@ -60,9 +62,10 @@ public class StdRegServ extends HttpServlet {
                 // 1.) student already registered
                 // 2.) page should have link of forgot password
                 System.err.println("This student is already registered.");
-                out.println("<b>Already Registered!</b>"); 
-                RequestDispatcher rd=request.getRequestDispatcher("home.html");
-                rd.include(request,response);  
+                response.setContentType("text/html");
+                out.println("<h2><b>This student is already registered.</b><h2>"); 
+                //RequestDispatcher rd=request.getRequestDispatcher("home.html");
+                //rd.include(request,response);  
             } else {
                 // Server side validation on student details can be put here
                 // now assuming all details are valid
@@ -70,13 +73,16 @@ public class StdRegServ extends HttpServlet {
                 if (valid) {
                     // adding new student
                     ps=con.prepareStatement("insert into students"
-                            + "(branch, enrollment_number, _name, _password, email_id, mobile_no) values(?,?,?,?,?,?)");
+                            + "(branch, enrollment_number, _name, _password, email_id, "
+                            + "mobile_no, number, fruit) values(?,?,?,?,?,?,?,?)");
                     ps.setString(1, branch);
                     ps.setString(2, enroll);
                     ps.setString(3, name);
                     ps.setString(4, password);
                     ps.setString(5, email);
                     ps.setString(6, mob);
+                    ps.setString(7, fNumber);
+                    ps.setString(8, fFruit);
                     int i = ps.executeUpdate();
 
                     if(i!=0) {
