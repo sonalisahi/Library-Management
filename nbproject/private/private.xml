@@ -6,7 +6,10 @@
             <file>file:/Users/sunny/Projects/Library-Management/web/home.html</file>
             <file>file:/Users/sunny/Projects/Library-Management/web/WEB-INF/web.xml</file>
             <file>file:/Users/sunny/Projects/Library-Management/src/java/controllers/UserTypeValidation.java</file>
+            <file>file:/Users/sunny/Projects/Library-Management/web/RegType.html</file>
             <file>file:/Users/sunny/Projects/Library-Management/web/StdReg.html</file>
+            <file>file:/Users/sunny/Projects/Library-Management/web/forgot.html</file>
+            <file>file:/Users/sunny/Projects/Library-Management/src/java/controllers/ForgotServ.java</file>
             <file>file:/Users/sunny/Projects/Library-Management/src/java/controllers/StdRegServ.java</file>
         </group>
     </open-files>

@@ -1,5 +1,5 @@
 /*
- * Todo : Add discription about this class
+ * Used for new registration
  */
 package controllers;
 
@@ -62,10 +62,16 @@ public class StdRegServ extends HttpServlet {
                 // 1.) student already registered
                 // 2.) page should have link of forgot password
                 System.err.println("This student is already registered.");
-                response.setContentType("text/html");
-                out.println("<h2><b>This student is already registered.</b><h2>"); 
-                //RequestDispatcher rd=request.getRequestDispatcher("home.html");
-                //rd.include(request,response);  
+                //response.setContentType("text/html");
+                String err_msg1 = "Student with enrollment number : " + enroll  + " is already registered.";
+                String support_msg1 = "Option to reset password is available at below in this page";
+
+                out.println("<div style='font-size: 20px; text-alling: center'>" 
+                        + "<p style='padding: 5px 20px;'>" +  err_msg1 + "</p>"
+                        + "<p style='padding: 5px 20px 10px;'>" +  support_msg1 + "</p>"
+                        + "<div>");
+                RequestDispatcher rd=request.getRequestDispatcher("home.html");
+                rd.include(request,response);  
             } else {
                 // Server side validation on student details can be put here
                 // now assuming all details are valid

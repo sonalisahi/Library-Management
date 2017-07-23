@@ -31,4 +31,13 @@
         <servlet-name>FacRegServ</servlet-name>
         <url-pattern>/FacRegServ</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ForgotServ</servlet-name>
+        <servlet-class>controllers.ForgotServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForgotServ</servlet-name>
+        <url-pattern>/ForgotServ</url-pattern>
+    </servlet-mapping>
 </web-app>    
